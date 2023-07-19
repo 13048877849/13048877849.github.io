@@ -1,23 +1,31 @@
-name: Vue3 Vite Vant H5 Template 
+name: Deploy to GH Pages
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }}
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout  ️ # 将代码拉取到虚拟机
-        uses: actions/checkout@v3
-
-      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
-        run: |
-          npm install
-          npm run build
-
-      - name: Deploy   # 部署
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
         with:
-          branch: release/blog # 部署后提交到那个分支
-          folder: dist # 这里填打包好的目录名称
+          persist-credentials: false
+
+      - name: Install 🔧
+        run: yarn install
+
+      - name: Build 🏗️
+        run: yarn build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to GH Pages 🚀
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
