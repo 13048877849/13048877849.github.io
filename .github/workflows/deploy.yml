@@ -1,42 +1,23 @@
-name: Hexo Deploy
-
+name: Vue3 Vite Vant H5 Template 
 on:
   push:
     branches:
-      - release/blogs
-
+      - main
 jobs:
-  build:
-    runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
-        with:
-          ref: release/blogs
+      - name: Checkout  ️ # 将代码拉取到虚拟机
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-
-      - name: Setup Hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-          ACTION_BAIDU_URL_SUBMIT_TOKEN: ${{ secrets.BAIDU_URL_SUBMIT_TOKEN }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "13048877849@163.com"
-          git config --global user.name "唐吉诃德"
-          npm install
-          
-
-      - name: Deploy
+      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
         run: |
           npm install
-          # hexo deploy
+          npm run build
+
+      - name: Deploy   # 部署
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: master # 部署后提交到那个分支
+          folder: dist # 这里填打包好的目录名称
