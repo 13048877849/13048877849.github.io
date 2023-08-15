@@ -1,3 +1,7 @@
+# git clone 
+# git fetch
+# git pull
+
 # zyshop
 
 ## Project setup
