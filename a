@@ -1,4 +1,6 @@
 niubi 
 牛逼2
 编辑就写文件。编辑完成就执行保存
-就是执行git add 动作
+就是执行git add 动作、
+后面执行git commit 动作
+再后面就执行git push 动作
