@@ -10,18 +10,18 @@
             <span>CONTACT OR VISIT US</span>
           </div>
           <div class="cont-us">
-            <i class="el-icon-message" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">E-Mail:&nbsp
+            <i class="el-icon-message" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">e-Mail:&nbsp
             </span>
-            <span>example@example.com</span><br>
+            <span>qry@milebrecycle.com & yzn@milebrecycle.com</span><br>
             <i class="el-icon-mobile-phone" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">Phone
               Number:&nbsp</span>
-            <span> +86&nbsp189&nbsp2849&nbsp9245</span><br>
-            <i class="el-icon-discover" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">Web
+            <span> +86 189 2849 9245 & +86 188 2385 8884 (Phone number support to add WeChat)</span><br>
+            <!-- <i class="el-icon-discover" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">Web
               Link:&nbsp</span>
-            <span> www.milebre.com</span><br>
+            <span> www.milebre.com</span><br> -->
             <i class="el-icon-service" style="font-size: 1.5em;margin-right: 8px;"></i><span class="bold-text">Online
               Time:&nbsp</span>
-            <span> Monday - Friday 9:00 AM to 21:00 PM</span><br>
+            <span> Monday - Friday 9:00 AM to 21:00 PM (GMT+8)</span><br>
             <i class="el-icon-position" style="font-size: 1.5em;margin-right: 8px;"></i><span
               class="bold-text">Address:&nbsp</span>
             <span> Near Vienna Hotel Shenzhen King Branch, Longhua District, Shenzhen, Guangdong Province, China</span>

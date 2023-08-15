@@ -5,8 +5,8 @@
         <el-carousel trigger="click" style="object-fit: contain;" class="image-container" :height="screenHehght + 'px'">
           <el-carousel-item v-for="item in 3" :key="item">
             <img style="object-fit: contain;" v-show="item === 2" src="../imgs/idxImg/202.jpg" alt="">
-            <img style="object-fit: contain;" v-show="item === 3" src="../imgs/idxImg/203.jpg" alt="">
-            <img style="object-fit: contain;" v-show="item === 1" src="../imgs/idxImg/201.jpg" alt="">
+            <img style="object-fit: contain;" v-show="item === 3" src="../imgs/idxImg/201.jpg" alt="">
+            <img style="object-fit: contain;" v-show="item === 1" src="../imgs/idxImg/203.jpg" alt="">
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -123,7 +123,7 @@
           </el-col>
         </el-row>
       </div>
-      <div>
+      <div class="backGround-img">
         <div class="my-pr" style="background-color: white;padding: 10px">
           ABOUT US
         </div>
@@ -161,19 +161,19 @@
               </div>
               <div class="cont-us">
                 <i class="el-icon-message" style="font-size: 1.3em;margin-right: 8px;"></i><span
-                  class="bold-text">E-Mail:&nbsp
+                  class="bold-text">e-Mail:&nbsp
                 </span>
-                <span>example@example.com</span><br>
+                <span>qry@milebrecycle.com & yzn@milebrecycle.com</span><br>
                 <i class="el-icon-mobile-phone" style="font-size: 1.3em;margin-right: 8px;"></i><span
                   class="bold-text">Phone
                   Number:&nbsp</span>
-                <span> +86&nbsp189&nbsp2849&nbsp9245</span><br>
-                <i class="el-icon-discover" style="font-size: 1.3em;margin-right: 8px;"></i><span class="bold-text">Web
+                <span> +86 189 2849 9245 & +86 188 2385 8884(Phone number support to add WeChat)</span><br>
+                <!-- <i class="el-icon-discover" style="font-size: 1.3em;margin-right: 8px;"></i><span class="bold-text">Web
                   Link:&nbsp</span>
-                <span> www.milebre.com</span><br>
+                <span> www.milebre.com</span><br> -->
                 <i class="el-icon-service" style="font-size: 1.3em;margin-right: 8px;"></i><span class="bold-text">Online
                   Time:&nbsp</span>
-                <span> Monday - Friday 9:00 AM to 21:00 PM</span><br>
+                <span> Monday - Friday 9:00 AM to 21:00 PM (GMT+8)</span><br>
                 <i class="el-icon-position" style="font-size: 1.3em;margin-right: 8px;"></i><span
                   class="bold-text">Address:&nbsp</span>
                 <span> Near Vienna Hotel Shenzhen King Branch, Longhua District, Shenzhen, Guangdong Province,
@@ -231,6 +231,14 @@ export default {
 </script>
 
 <style scoped>
+.backGround-img{
+  width: 100%;
+  /* height: 815px; 设置容器的高度 */
+  background-image: url('../imgs/background.png'); /* 替换为你的图像路径 */
+  background-size: cover; /* 控制背景图像的大小 */
+  background-position: center; /* 控制背景图像的位置 */
+  min-width: 400px; /* 设置图片的最小宽度 */
+}
 .lazy {
   width: 100px;
   height: 300px;
@@ -324,6 +332,7 @@ export default {
   line-height: 1.5;
   /* 公司介绍文本的格式：首行空格两字符、左对齐、1.5 倍行距 */
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 .my-text2 {
@@ -335,10 +344,11 @@ export default {
   width: 80%;
   margin: auto;
   padding: 20px;
-  background-color: white;
+  background-color: transparent;
   box-sizing: border-box;
   border: 0px solid #ddd;
   font-size: 25px;
+  color: white;
 }
 
 .el-carousel__item {
@@ -381,12 +391,13 @@ img {
 /* 产品介绍打字的效果 */
 
 #text-div {
+  color: #ededed;
   width: 80%;
   margin: auto;
   padding: 20px;
-  background-color: white;
+  background-color: transparent;
   box-sizing: border-box;
-  border: 0px solid #ddd;
+  border: 0px solid transparent;
   font-size: 22px;
   line-height: 2;
   margin-top: 9px;
@@ -396,9 +407,9 @@ img {
   /* width: 80%; */
   margin: auto;
   padding: 20px;
-  background-color: white;
+  background-color: transparent;
   box-sizing: border-box;
-  border: 0px solid #ddd;
+  border: 0px solid transparent;
   font-size: 25px;
   line-height: 2;
 }
