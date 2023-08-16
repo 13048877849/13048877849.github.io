@@ -11,9 +11,9 @@
             <div class="grid-content bg-purple" >
               <span class="cout-ltd">Copyright:2023 Maixianyi Technology Co., Ltd. Shenzhen. All rights reserved.</span>
             </div>
-            <!-- <div class="grid-content bg-purple">
-              11111
-            </div> -->
+            <div class="grid-content bg-purple">
+               
+            </div>
             <!-- <div class="grid-content bg-purple">
               11111
             </div> -->

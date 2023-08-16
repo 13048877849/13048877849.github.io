@@ -24,7 +24,7 @@
             <span> Monday - Friday 9:00 AM to 21:00 PM (GMT+8)</span><br>
             <i class="el-icon-position" style="font-size: 1.5em;margin-right: 8px;"></i><span
               class="bold-text">Address:&nbsp</span>
-            <span> Near Vienna Hotel Shenzhen King Branch, Longhua District, Shenzhen, Guangdong Province, China</span>
+            <span> 731 Longguan Avenue, Shenzhen, Guangdong Province, China</span>
           </div>
         </div>
         <div class="gt-to">
